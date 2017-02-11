@@ -17,7 +17,7 @@ public class BlackJackHand extends Hand{
     int numOfA = 0;
     int sum = 0;
     for (Card c : cards) {
-      int v = c.getFaceValue();
+      int v = getValue(c);
       sum += v;
       if (v == 1) numOfA++;
     }

@@ -15,7 +15,7 @@ public class Deck {
   //before start every round, we should shuffle the deck to a random order. We can use an array to record the order
   public void shuffle() {
     for (int i = cards.size() - 1; i > 0; i--) {
-      int index = (int) Math.random() * (i + 1);
+      int index = (int) (Math.random() * (i + 1));
       Card c1 = cards.get(index);
       Card c2 = cards.get(i);
       cards.set(index, c2);
