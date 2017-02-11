@@ -27,13 +27,13 @@ public class Deck {
     return cards.size() - indexOfDeck;
   }
   
-  public Card[] dealHand(int number) {
+  public List<Card> dealHand(int number) {
     if (number > remainingCard()) {
       return null;
     }
-    Card[] C = new Card[number];
+    List<Card> C = new ArrayList<>();
     for (int i = 0; i < number; i++) {
-      C[i] = dealCard();
+      C.add(dealCard());
     }
     return C;
   }
